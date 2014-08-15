@@ -46,6 +46,7 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 	private ImageView _bigImageView = null;
 	private Joke _joke = null;
 	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
