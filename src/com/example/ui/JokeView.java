@@ -21,6 +21,7 @@ import android.support.v7.app.ActionBarActivity;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 
 import android.view.View.OnClickListener;
@@ -46,6 +47,8 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 	private Joke _joke = null;
 	private LinearLayout _big_layout = null;
 	private LinearLayout _joke_layout = null;
+	
+	private boolean _is_big = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -88,13 +91,14 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 			String url = _joke.getImage();
 			Bitmap bitmap = _imageLoader.getBitmap(url);
 			if (bitmap != null) {
-				getActionBar().hide();
+				//getActionBar().hide();
 				_joke_layout.setVisibility(View.GONE);
 				_big_layout.setBackgroundColor(Color.BLACK);
 				_big_layout.setVisibility(View.VISIBLE);
 				_bigImageView.setVisibility(View.VISIBLE);
 				_bigImageView.setImageBitmap(bitmap);
 				_bigImageView.setScaleType(ScaleType.FIT_XY);
+				_is_big = true;
 				// ÕÚ¸Ç×´Ì¬À¸
 				//_bigImageView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 			}
@@ -106,17 +110,29 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 		@Override
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
-			_bigImageView.setVisibility(View.GONE);
-			_big_layout.setVisibility(View.GONE);
-			_joke_layout.setVisibility(View.VISIBLE);
-			getActionBar().show();
+			hideBigImage();
 			// ÏÔÊ¾×´Ì¬À¸
 			//_bigImageView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
 			//_bigImageView.set
 		}
 	};
 	
-			
+	public void hideBigImage() {
+		_bigImageView.setVisibility(View.GONE);
+		_big_layout.setVisibility(View.GONE);
+		_joke_layout.setVisibility(View.VISIBLE);
+		//getActionBar().show();
+		_is_big = false;
+	}
+	
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		if (_is_big && event.getAction() == MotionEvent.ACTION_UP) {
+			hideBigImage();
+		}
+		return super.onTouchEvent(event);
+	}
+	
 	@Override 
 	public void onClick(View view) {
 		String id = _idEditView.getText().toString();
