@@ -28,6 +28,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,7 +44,8 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 	private TextView _idTextView = null;
 	private ImageView _bigImageView = null;
 	private Joke _joke = null;
-	
+	private LinearLayout _big_layout = null;
+	private LinearLayout _joke_layout = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,8 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 		_idEditView = (EditText) findViewById(R.id.joke_edit_id);
 		_idTextView = (TextView) findViewById(R.id.joke_view_id);
 		_bigImageView = (ImageView) findViewById(R.id.joke_view_bigimg);
-		
+		_big_layout = (LinearLayout) findViewById(R.id.big_layout);
+		_joke_layout = (LinearLayout) findViewById(R.id.joke_layout);
 		_imageLoader = new ImageLoader(_imageView);
 		
 		setView(position);
@@ -86,6 +89,9 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 			Bitmap bitmap = _imageLoader.getBitmap(url);
 			if (bitmap != null) {
 				getActionBar().hide();
+				_joke_layout.setVisibility(View.GONE);
+				_big_layout.setBackgroundColor(Color.BLACK);
+				_big_layout.setVisibility(View.VISIBLE);
 				_bigImageView.setVisibility(View.VISIBLE);
 				_bigImageView.setImageBitmap(bitmap);
 				_bigImageView.setScaleType(ScaleType.FIT_XY);
@@ -101,6 +107,8 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			_bigImageView.setVisibility(View.GONE);
+			_big_layout.setVisibility(View.GONE);
+			_joke_layout.setVisibility(View.VISIBLE);
 			getActionBar().show();
 			// ÏÔÊ¾×´Ì¬À¸
 			//_bigImageView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
