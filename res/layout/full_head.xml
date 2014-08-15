@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="#ffffff">
+    
+    <RelativeLayout android:id="@+id/head_contentLayout" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingLeft="30dp" >
+        
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" android:layout_centerVertical="true" >
+            
+            <ImageView android:id="@+id/head_arrowImageView" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center" 
+                android:src="@drawable/arrow_down" android:contentDescription="@string/pulled_text"/>
+            
+            <ProgressBar android:id="@+id/head_progressBar" style="?android:attr/progressBarStyleInverse"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" 
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true" android:gravity="center_horizontal"
+			android:orientation="vertical" > 
+			
+			<TextView android:id="@+id/head_tipsTextView" android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content" android:text="@string/pull_text" android:textSize="15sp" /> 
+			    
+			<TextView android:id="@+id/head_lastUpdatedTextView" android:layout_width="wrap_content"
+			    android:layout_height="wrap_content" android:text="@string/pulled_text" android:textSize="12sp" />
+			
+		</LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

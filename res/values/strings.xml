@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">经典爆笑</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">点我试试</string>
+    <string name="title_activity_joke_view">哈哈哈</string>
+    <string name="title_activity_joke_list">JokeList</string>
+    <string name="btn_next">下一个</string>
+    <string name="btn_prev">上一个</string>
+    <string name="pull_text">下拉刷新</string>
+    <string name="pulled_text">~~~</string>
+    <string name="text_def">-1</string>
+    <string name="load_data">正在努力加载数据中。。</string>
+
+</resources>

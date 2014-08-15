@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">	
+    <com.example.ui.PullDownListView android:id="@+id/joke_listView" android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" android:fastScrollEnabled="true"
+        android:divider="#b5b5b5" android:dividerHeight="1dp" android:minHeight="100dp"
+        android:listSelector="@drawable/list_selector" />       
+</LinearLayout>

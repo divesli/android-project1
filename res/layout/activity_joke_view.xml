@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" 
+	    android:layout_gravity="center_horizontal" android:orientation="vertical">
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="100dp"
+		    android:orientation="horizontal" android:layout_weight="1" 
+		    android:gravity="center">  
+		    <TextView android:id="@+id/joke_view_id" android:layout_width="wrap_content"
+	        	android:layout_height="fill_parent" android:layout_gravity="center" 
+				android:gravity="center"/>
+	        	
+	    	<TextView android:id="@+id/joke_view_title" android:layout_width="wrap_content"
+	        	android:layout_height="fill_parent" android:layout_gravity="center" 
+	        	android:gravity="center"/>
+	
+		</LinearLayout>
+		
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+		    android:orientation="vertical" android:layout_weight="2">
+	    	<TextView android:id="@+id/joke_view_content" android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content" android:layout_marginLeft="10dp" 
+	        	android:layout_marginRight="10dp" android:layout_marginTop="20dp"/>
+	    	
+	    	<ImageView android:id="@+id/joke_view_image" android:layout_width="wrap_content"
+	    	    android:layout_height="wrap_content" android:layout_gravity="center" 
+	    	    android:contentDescription="@string/pulled_text" android:layout_marginTop="20dp"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="100dp"
+		    android:orientation="horizontal" android:layout_weight="1" >
+	    	<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+		    android:orientation="horizontal" android:layout_weight="1" android:gravity="left">
+		    	 <ImageButton android:id="@+id/btn_prev" android:layout_width="wrap_content"
+		    	    android:layout_height="50dp" android:layout_gravity="left"
+		   	    	android:src="@drawable/prev" android:contentDescription="@string/btn_next"
+		   	    	android:layout_marginBottom="10dp"  android:background="#00000000"/>
+	    	 </LinearLayout>
+	    	 <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+		    android:orientation="horizontal" android:layout_weight="1" >
+		    	 <EditText android:id="@+id/joke_edit_id" android:layout_width="0dp"  
+		    	    android:layout_height="wrap_content" android:text="@string/text_def"
+		    	    android:visibility="gone" android:layout_weight="1"/>
+	    	 </LinearLayout>
+	    	 <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+		    android:orientation="horizontal" android:layout_weight="1" android:gravity="right">
+			    <ImageButton android:id="@+id/btn_next" android:layout_width="wrap_content"
+		    	    android:layout_height="50dp" android:layout_gravity="right"
+		   	    	android:src="@drawable/next" android:contentDescription="@string/btn_next"
+		   	    	android:layout_marginBottom="10dp" android:background="#00000000"/>
+		    </LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+	<ImageView android:id="@+id/joke_view_bigimg" android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent" android:layout_gravity="center" 
+	    	    android:contentDescription="@string/pulled_text" android:src="@drawable/loading"
+	    	    android:visibility="gone"/>
+</FrameLayout>
