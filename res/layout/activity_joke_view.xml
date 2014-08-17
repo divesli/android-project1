@@ -4,6 +4,13 @@
 	<LinearLayout android:id="@+id/joke_layout"  android:layout_width="fill_parent"  android:layout_height="fill_parent" 
 	    android:layout_gravity="center_horizontal" android:orientation="vertical" android:visibility="visible">
 		<LinearLayout android:layout_width="fill_parent" android:layout_height="100dp"
+			android:orientation="horizontal" android:layout_weight="1" 
+		    android:gravity="left">
+		    <TextView android:id="@+id/view_title" android:layout_width="wrap_content"
+	        	android:layout_height="fill_parent" android:layout_gravity="left" 
+				android:gravity="center"/> 
+		</LinearLayout> 
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="100dp"
 		    android:orientation="horizontal" android:layout_weight="1" 
 		    android:gravity="center">  
 		    <TextView android:id="@+id/joke_view_id" android:layout_width="wrap_content"
