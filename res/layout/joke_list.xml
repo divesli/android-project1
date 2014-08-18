@@ -4,7 +4,7 @@
     android:layout_height="100dp"
     android:orientation="horizontal"
     android:layout_gravity="center_horizontal">	
-     <TextView android:id="@+id/joke_id" android:layout_width="40dp"
+     <TextView android:id="@+id/joke_id" android:layout_width="60dp"
         	android:layout_height="50dp" android:layout_gravity="bottom|left" 
         	android:layout_marginLeft="10dp" android:gravity="center_vertical|right"/>
     <TextView android:id="@+id/joke_title" android:layout_width="wrap_content"

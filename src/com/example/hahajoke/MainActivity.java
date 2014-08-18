@@ -2,8 +2,6 @@ package com.example.hahajoke;
 
 
 import com.example.netreader.JokeLoader;
-import com.example.ui.GifView;
-import com.example.ui.GifView.GifImageType;
 
 import android.support.v7.app.ActionBarActivity;
 

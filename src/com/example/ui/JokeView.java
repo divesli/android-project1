@@ -9,7 +9,6 @@ import com.example.netreader.ImageLoader;
 import com.example.tool.BaseTool;
 
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -19,6 +18,7 @@ import android.os.Bundle;
 
 import android.support.v7.app.ActionBarActivity;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -31,6 +31,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,13 +49,15 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 	private Joke _joke = null;
 	private LinearLayout _big_layout = null;
 	private LinearLayout _joke_layout = null;
+
 	
 	private boolean _is_big = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_joke_view);
 		
 		Intent intent = getIntent();
@@ -68,6 +71,8 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 		_bigImageView = (ImageView) findViewById(R.id.joke_view_bigimg);
 		_big_layout = (LinearLayout) findViewById(R.id.big_layout);
 		_joke_layout = (LinearLayout) findViewById(R.id.joke_layout);
+
+		
 		_imageLoader = new ImageLoader(_imageView);
 		
 		setView(position);
@@ -77,8 +82,8 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 		ImageButton btn_prev = (ImageButton) findViewById(R.id.btn_prev);
 		btn_prev.setOnClickListener(this);
 		
-		ActionBar bar = getActionBar();
-		bar.setDisplayHomeAsUpEnabled(true);
+		//ActionBar bar = getActionBar();
+		//bar.setDisplayHomeAsUpEnabled(true);
 		
 		_imageView.setOnClickListener(imageListener);
 		
@@ -100,6 +105,7 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 				_bigImageView.setVisibility(View.VISIBLE);
 				_bigImageView.setImageBitmap(bitmap);
 				_bigImageView.setScaleType(ScaleType.FIT_XY);
+				//_sScrollView
 				_is_big = true;
 				// ÕÚ¸Ç×´Ì¬À¸
 				//_bigImageView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
@@ -129,6 +135,7 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
+		Log.i("touch", "touch....");
 		if (_is_big && event.getAction() == MotionEvent.ACTION_UP) {
 			hideBigImage();
 		}

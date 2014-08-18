@@ -6,9 +6,7 @@ import com.example.netreader.JokeLoader;
 import com.example.ui.PullDownListView.OnRefreshListener;
 
 import android.support.v7.app.ActionBarActivity;
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
