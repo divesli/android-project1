@@ -380,6 +380,7 @@ int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string action_settings 0x7f0a000f
 int string app_name 0x7f0a000d
+int string back 0x7f0a0018
 int string btn_next 0x7f0a0012
 int string btn_prev 0x7f0a0013
 int string hello_world 0x7f0a000e

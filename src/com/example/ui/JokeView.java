@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -31,7 +32,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,7 +71,9 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 		_bigImageView = (ImageView) findViewById(R.id.joke_view_bigimg);
 		_big_layout = (LinearLayout) findViewById(R.id.big_layout);
 		_joke_layout = (LinearLayout) findViewById(R.id.joke_layout);
-
+		
+		ImageView logo = (ImageView) findViewById(R.id.view_title_image);
+		logo.setOnClickListener(logoListener);
 		
 		_imageLoader = new ImageLoader(_imageView);
 		
@@ -90,6 +92,16 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 		_bigImageView.setOnClickListener(bigImageListener);
 				
 	}
+	
+	OnClickListener logoListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			finish();
+		}
+	};
+	
 	OnClickListener imageListener = new OnClickListener() {
 		
 		@Override
@@ -102,6 +114,7 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 				_joke_layout.setVisibility(View.GONE);
 				_big_layout.setBackgroundColor(Color.BLACK);
 				_big_layout.setVisibility(View.VISIBLE);
+				
 				_bigImageView.setVisibility(View.VISIBLE);
 				_bigImageView.setImageBitmap(bitmap);
 				_bigImageView.setScaleType(ScaleType.FIT_XY);
@@ -140,6 +153,16 @@ public class JokeView extends ActionBarActivity implements OnClickListener{
 			hideBigImage();
 		}
 		return super.onTouchEvent(event);
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK && _is_big) {
+			hideBigImage();
+			return false;
+		} else {
+			return super.onKeyDown(keyCode, event);
+		}
 	}
 	
 	@Override 

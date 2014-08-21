@@ -12,5 +12,6 @@
     <string name="pulled_text">~~~</string>
     <string name="text_def">-1</string>
     <string name="load_data">正在努力加载数据中。。</string>
+    <string name="back">..</string>
 
 </resources>

@@ -3,16 +3,17 @@
     android:layout_height="fill_parent">
 	<LinearLayout android:id="@+id/joke_layout"  android:layout_width="fill_parent"  android:layout_height="fill_parent" 
 	    android:layout_gravity="center_horizontal" android:orientation="vertical" android:visibility="visible">
-		<LinearLayout android:layout_width="fill_parent" android:layout_height="100dp"
-			android:orientation="horizontal" android:layout_weight="1" 
-		    android:gravity="left" android:background="#00000000" >
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="110dp"
+			android:orientation="horizontal" android:layout_weight="1"  android:background="#222222" >
+			
 		    <ImageView android:id="@+id/view_title_image" android:layout_width="wrap_content"
 	    	    android:layout_height="wrap_content" android:layout_gravity="center" 
 	    	    android:contentDescription="@string/pulled_text" android:src="@drawable/ic_launcher"/>
 		    <TextView android:id="@+id/view_title" android:layout_width="wrap_content"
-	        	android:layout_height="50dp" android:layout_gravity="left" 
+	        	android:layout_height="50dp" android:layout_gravity="center" 
 				android:gravity="center" android:text="@string/title_activity_joke_view"
-				android:textColor="#FF0000" android:background="#00000000" android:textSize="20sp"/>
+				android:textColor="#FF0000" android:textSize="20sp"/>
+		    
 		</LinearLayout> 
 		
 		<LinearLayout android:layout_width="fill_parent" android:layout_height="100dp"
@@ -47,7 +48,7 @@
 		    	 <ImageButton android:id="@+id/btn_prev" android:layout_width="wrap_content"
 		    	    android:layout_height="50dp" android:layout_gravity="left"
 		   	    	android:src="@drawable/prev" android:contentDescription="@string/btn_next"
-		   	    	android:layout_marginBottom="10dp"  android:background="#00000000"/>
+		   	    	android:layout_marginBottom="10dp" android:background="#00000000"/>
 	    	 </LinearLayout>
 	    	 <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
 		    android:orientation="horizontal" android:layout_weight="1" >
@@ -67,9 +68,9 @@
 	</LinearLayout>
 	<LinearLayout android:id="@+id/big_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" 
 	    android:layout_gravity="center" android:orientation="vertical"  android:gravity="center"
-	    android:background="#00000000" android:visibility="gone">
+	    android:background="#000000" android:visibility="gone" android:animateLayoutChanges="true">
 		<ScrollView  android:id="@+id/scroll_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
-		    android:scrollbars="none" android:fillViewport="true" android:background="#00000000">
+		    android:scrollbars="none" android:fillViewport="true" android:background="#000000">
 			<ImageView android:id="@+id/joke_view_bigimg" android:layout_width="wrap_content"
 	    	    android:layout_height="wrap_content" android:layout_gravity="top" 
 	    	    android:contentDescription="@string/pulled_text" android:src="@drawable/loading"
