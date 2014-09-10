@@ -50,6 +50,8 @@ int attr dividerVertical 0x7f01001a
 int attr dropDownListViewStyle 0x7f010021
 int attr dropdownListPreferredItemHeight 0x7f010048
 int attr expandActivityOverflowButtonDrawable 0x7f01006b
+int attr gif 0x7f01006e
+int attr gifMoviewViewStyle 0x7f010070
 int attr height 0x7f010026
 int attr homeAsUpIndicator 0x7f010013
 int attr homeLayout 0x7f010033
@@ -72,6 +74,7 @@ int attr paddingEnd 0x7f010039
 int attr paddingStart 0x7f010038
 int attr panelMenuListTheme 0x7f01004b
 int attr panelMenuListWidth 0x7f01004a
+int attr paused 0x7f01006f
 int attr popupMenuStyle 0x7f010049
 int attr popupPromptView 0x7f010053
 int attr progressBarPadding 0x7f010036
@@ -531,6 +534,7 @@ int style Widget_AppCompat_PopupMenu 0x7f0b002b
 int style Widget_AppCompat_ProgressBar 0x7f0b000a
 int style Widget_AppCompat_ProgressBar_Horizontal 0x7f0b0009
 int style Widget_AppCompat_Spinner_DropDown_ActionBar 0x7f0b0022
+int style Widget_GifMoviewView 0x7f0b008d
 int[] styleable ActionBar { 0x7f010025, 0x7f010026, 0x7f010027, 0x7f010028, 0x7f010029, 0x7f01002a, 0x7f01002b, 0x7f01002c, 0x7f01002d, 0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031, 0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037 }
 int styleable ActionBar_background 10
 int styleable ActionBar_backgroundSplit 12
@@ -575,6 +579,11 @@ int styleable ActivityChooserView_expandActivityOverflowButtonDrawable 1
 int styleable ActivityChooserView_initialActivityCount 0
 int[] styleable CompatTextView { 0x7f01006d }
 int styleable CompatTextView_textAllCaps 0
+int[] styleable CustomTheme { 0x7f010070 }
+int styleable CustomTheme_gifMoviewViewStyle 0
+int[] styleable GifMoviewView { 0x7f01006e, 0x7f01006f }
+int styleable GifMoviewView_gif 0
+int styleable GifMoviewView_paused 1
 int[] styleable LinearLayoutICS { 0x7f01002e, 0x7f010055, 0x7f010056 }
 int styleable LinearLayoutICS_divider 0
 int styleable LinearLayoutICS_dividerPadding 2
