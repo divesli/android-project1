@@ -2,6 +2,7 @@ package com.example.hahajoke;
 
 
 import com.example.netreader.JokeLoader;
+import com.example.ui.GifMovieView;
 
 import android.support.v7.app.ActionBarActivity;
 
@@ -29,8 +30,10 @@ public class MainActivity extends ActionBarActivity {
 		//gifView.setGifImage(R.drawable.open_image);
 		//gifView.setGifImageType(GifImageType.SYNC_DECODER);
 		//gifView.showAnimation();
-		_jLoader = new JokeLoader(this,JokeLoader.INIT);
-		_jLoader.start();
+		 GifMovieView gif1 = (GifMovieView) findViewById(R.id.gif1);
+		 gif1.setMovieResource(R.drawable.open_image);
+		//_jLoader = new JokeLoader(this,JokeLoader.INIT);
+		//_jLoader.start();
 	}
 	
 	@Override
