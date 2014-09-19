@@ -77,8 +77,6 @@
 	    	    android:layout_height="wrap_content" android:layout_gravity="top" 
 	    	    android:contentDescription="@string/pulled_text" android:src="@drawable/loading"
 	    	    android:visibility="gone"/>
-			<com.example.ui.GifMovieView android:id="@+id/joke_view_biggif" android:layout_width="fill_parent" 
-                android:layout_height="fill_parent" android:visibility="gone"/> 
 		</ScrollView>
 	</LinearLayout>
 </FrameLayout>
