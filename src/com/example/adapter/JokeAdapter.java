@@ -64,7 +64,7 @@ public class JokeAdapter extends BaseAdapter{
 	}
 	
 	/**
-	 * @brief ²âÊÔÊı¾İ
+	 * @brief æµ‹è¯•
 	 * @author divesli
 	 *
 	 */
