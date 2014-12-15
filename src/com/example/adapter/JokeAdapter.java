@@ -62,6 +62,7 @@ public class JokeAdapter extends BaseAdapter{
 		viewHolder.titleView.setTextSize(20.0f);
 		return view;
 	}
+	
 	public class ViewHolder {
 		public TextView idView;
 		public TextView titleView;
