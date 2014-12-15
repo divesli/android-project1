@@ -64,7 +64,7 @@ public class JokeAdapter extends BaseAdapter{
 	}
 	/**
 	 * @brief ²âÊÔÊı¾İ
-	 * @author lizhonghong
+	 * @author divesli
 	 *
 	 */
 	public class ViewHolder {
