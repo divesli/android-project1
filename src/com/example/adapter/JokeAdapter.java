@@ -63,7 +63,7 @@ public class JokeAdapter extends BaseAdapter{
 		return view;
 	}
 	/**
-	 * @brief 测试数据  
+	 * @brief 测试数据
 	 * @author divesli
 	 *
 	 */
